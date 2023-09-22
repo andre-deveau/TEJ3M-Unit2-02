@@ -1,0 +1,27 @@
+/*
+ Blink With Variable
+  
+ Turns an LED on for one second, then off for one second, repeatedly.
+ But the interval increases each time by 1 more seconds
+
+ Created on Sep 2023
+ by Andre Deveau
+*/
+
+int blinkTime = 1000; // set variable to 1000
+
+
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(LED_BUILTIN, HIGH);  
+  delay(blinkTime);                  
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+
+  blinkTime = blinkTime + 1000; 
+}
